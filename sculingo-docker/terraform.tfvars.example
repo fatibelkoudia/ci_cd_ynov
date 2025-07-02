@@ -1,0 +1,7 @@
+# Scalingo Configuration
+# Get your API token from: https://dashboard.scalingo.com/account/tokens
+# Replace with your actual Scalingo API token
+scalingo_token = "tk-us-your-scalingo-token-here"
+
+# Note: The app name "loisefenoll-test-01" is currently hardcoded in main.tf
+# If you want to use a different name, you'll need to update it in main.tf as well
