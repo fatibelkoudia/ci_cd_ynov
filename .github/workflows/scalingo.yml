@@ -83,10 +83,22 @@ jobs:
           # Copy configuration files
           cp sculingo-docker/Procfile monoapp/Procfile
           cp sculingo-docker/.buildpacks monoapp/.buildpacks
+          cp sculingo-docker/package.json monoapp/package.json
 
           # Create archive
           tar -czvf monoapp.tar.gz --exclude='.git' -C monoapp .
+          
+          # Debug: Show archive structure
+          echo "=== Archive Contents ==="
           ls -la monoapp/
+          echo "=== Front Directory ==="
+          ls -la monoapp/front/ || echo "No front directory"
+          echo "=== API Node Directory ==="
+          ls -la monoapp/api-node/ || echo "No api-node directory"
+          echo "=== API Python Directory ==="
+          ls -la monoapp/api-python/ || echo "No api-python directory"
+          echo "=== Root Files ==="
+          ls -la monoapp/*.json || echo "No JSON files"
 
       - uses: actions/upload-artifact@v4
         with:

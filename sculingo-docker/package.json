@@ -1,0 +1,25 @@
+{
+  "name": "tima-fullstack-app",
+  "version": "1.0.0",
+  "description": "Full-stack microservices application",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'Use specific process types: web, api-python, api-node'",
+    "install-all": "cd front && npm install && cd ../api-node && npm install",
+    "build": "cd front && npm run build"
+  },
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatibelkoudia/ci_cd_ynov.git"
+  },
+  "author": "Team",
+  "license": "MIT"
+}
